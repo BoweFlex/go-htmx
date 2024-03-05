@@ -10,3 +10,4 @@ Loose plan from here is:
 - Build out other subpaths, i.e:
   - [books](https://openlibrary.org/developers/api)
   - [exchange rates](https://github.com/BoweFlex/CurrencyConverter)
+  - [more apis](https://github.com/public-apis/public-apis?tab=readme-ov-file#index)
