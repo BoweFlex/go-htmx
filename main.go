@@ -25,16 +25,16 @@ func main() {
 
     fullHost := fmt.Sprintf("%v:%v", host, port)
 
-    http.Handle("/static/",
-        http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+    http.Handle("/style/",
+        http.StripPrefix("/style/", http.FileServer(http.Dir("./web/style"))))
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        tmpl := template.Must(template.ParseFiles("./templates/index.html"))
+        tmpl := template.Must(template.ParseFiles("./web/templates/index.html"))
         tmpl.Execute(w, nil)
     })
 
     http.HandleFunc("/search", func(w http.ResponseWriter, r *http.Request) {
-        tmpl := template.Must(template.ParseFiles("./templates/fragments/results.html"))
+        tmpl := template.Must(template.ParseFiles("./web/templates/fragments/results.html"))
         data := map[string][]Stock {
             "Results": SearchTicker(r.URL.Query().Get("key")),
         }
