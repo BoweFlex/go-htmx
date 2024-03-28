@@ -47,7 +47,7 @@ func main() {
 			ticker := r.PostFormValue("ticker")
 			stk := SearchTicker(ticker)[0]
 			val := GetDailyValues(ticker)
-			tmpl := template.Must(template.ParseFiles("./templates/index.html"))
+			tmpl := template.Must(template.ParseFiles("./web/templates/index.html"))
 			tmpl.ExecuteTemplate(w, "stock-element",
 				Stock{Ticker: stk.Ticker, Name: stk.Name, Price: val.Open})
 		}

@@ -1,15 +1,14 @@
 <ul>
     {{range .Results}}
-    <li>
+    <li class="flex justify-center leading-loose">
         <h3>{{.Name}}</h3>
-        <button
+        <button class="self-center h-8 w-9 px-15 ml-7 border-0 rounded bg-purple-500 leading-loose font-bold uppercase cursor-pointer"
             name="ticker"
             value="{{.Ticker}}"
             hx-post="/stock/"
-            hx-indicator="#spinner"
             hx-target="#stock-list"
             hx-swap="beforeend">
-            <span id="spinner">...</span> Add
+            Add
         </button>
     </li>
     {{end}}
