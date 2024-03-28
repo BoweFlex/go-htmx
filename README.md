@@ -33,3 +33,20 @@ For now, the following commands can be run from inside `web/`:
 ./tailwindcss -i input.css -o output.css --minify
 
 ```
+
+## TODO
+- [x] Implement Tailwind
+- [ ] Home Page
+  - I'm picturing a basic page (main section could be lorum ipsum filler for now) with a header w/ the site's title. Dropdown menu in topright corner w/ options for pages/projects.
+  - Header probably stays, and main section refills based on which page is currently visible.
+- [ ] Implement dark mode. This is currently implemented in tailwind, but has to be manually changed in the html. Add a button in the dropdown menu to control this.
+- [ ] Adjust Stocks page
+  - Should be a secondary after home page, and sidebar instead of header
+- [ ] TODO page
+  - Starting out, controls an array of kv pairs inside go (only lives for duration of application)
+  - Eventually, it'd be cool to have this read from and write to .md files on the "server", and allow them to be exported?
+- [ ] Login page
+  - Should allow you to create and utilize users. Utilize means have personal TODO (should you have an option to make them public or private?), cache of stocks you're viewing, etc.
+  - Same as TODO, starting out these could be ephemeral
+  - Eventually, should be stored and obviously hashed in a database and more permanent.
+- [ ] Monkeytype clone?
