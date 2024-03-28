@@ -24,6 +24,7 @@ For now, the following commands can be run from inside `web/`:
 ```bash
 
 # Create a tailwind.config.js file
+# Only needed first time, otherwise just need to make sure cli tool is installed and executable
 ./tailwindcss init
 
 # Start a watcher
