@@ -10,28 +10,17 @@
     <body class="bg-white dark:bg-slate-950 dark:text-white m-0 font-mono">
         <main>
             <header class="bg-slate-700 h-24">
-                <ul id="stock-list" class="h-full m-0 p-0 list-none flex">
-                    {{ range .Stocks }}
-                    {{ block "stock-element" .}}
-                    <li class="h-full px-10 flex flex-col items-center justify-center">
-                        <h5 class="text-2xl font-normal m-0">
-                            <strong class="text-green-500">${{ .Price }}</strong> {{ .Ticker }}</h5>
-                        <h6 class="text-base font-extralight mt-1">{{ .Name }}</h6>
-                    </li>
-                    {{ end }}
-                    {{ end }}
-                </ul>
+                <label for="pages">Choose a page:</label>
+                    <select name="pages">
+                        <option value="stocks">Stocks</option>
+                    </select>
             </header>
             <section class="h-dvh flex flex-col items-center">
-                <div>
-                    <input class="h-14 mt-40 ml-20 px-5 w-72 bg-transparent leading-loose border-2 border-purple-500 rounded outline-none"
-                        type="search" name="key" placeholder="Search..."
-                        hx-get="/search"
-                        hx-trigger="keyup changed delay:500ms"
-                        hx-target="#search-results"/>
-                </div>
-
-                <div id="search-results"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut viverra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In sit amet massa iaculis, faucibus mi vitae, commodo risus. Suspendisse ultrices nulla vel urna iaculis, non volutpat lacus ullamcorper. Praesent eu placerat nulla, ac luctus dui. Nunc tellus sapien, euismod vitae lacus quis, ullamcorper malesuada quam. Vestibulum porttitor aliquet consectetur.</p>
+                <p>Integer ullamcorper varius libero, sed porttitor justo dictum ut. Cras interdum lacinia volutpat. Ut eget nisl suscipit, porta leo vel, vulputate nibh. Vestibulum nec lectus id tellus eleifend pretium et non augue. Quisque faucibus vestibulum dictum. Aliquam a ligula aliquam, pulvinar risus ut, efficitur velit. Nulla nec accumsan nibh. Vivamus in nibh a metus congue vulputate nec sit amet velit. Sed ut nulla a justo eleifend auctor. Quisque malesuada ipsum diam, ut faucibus nunc egestas et. Duis et mattis ante. Sed eget est et neque blandit venenatis. Fusce et tortor euismod, dapibus nibh non, fringilla nibh. Donec accumsan orci metus, eget imperdiet nulla fermentum non. Fusce nec porttitor ex.</p>
+                <p>Vestibulum velit nisi, aliquam accumsan orci sed, rutrum scelerisque enim. Praesent justo mauris, tincidunt in turpis non, pulvinar venenatis tellus. Praesent dictum ut tortor ac scelerisque. Donec eget hendrerit justo. Sed ultricies ullamcorper enim. Cras a dapibus magna. Phasellus sit amet sagittis diam. Aliquam erat volutpat. Phasellus id enim velit.</p>
+                <p>Donec at ligula et nisl sollicitudin vestibulum et a dui. Nulla dictum quam at dui blandit rutrum. Sed viverra tellus semper diam sodales, ultricies scelerisque erat luctus. Sed quis dui ac metus suscipit condimentum. Donec tristique quam a nunc finibus, ac sodales dui malesuada. Ut posuere sapien eu lorem venenatis lobortis. Donec non nunc aliquam, viverra dolor quis, suscipit sapien. Morbi vehicula nisl eu sodales iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce facilisis felis a sapien ornare, quis varius ex rutrum. Nam in libero vitae libero mollis vehicula.</p>
+                <p>Ut sollicitudin, eros sed ultrices efficitur, justo sem ultrices risus, vel tincidunt nisl tortor eget lorem. Mauris ornare rutrum felis nec vestibulum. Curabitur volutpat mollis ullamcorper. Nulla facilisi. Nullam ut vehicula lorem. Phasellus feugiat nisl tortor. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Integer id libero in dui blandit blandit et congue lectus. Maecenas vestibulum eu justo at volutpat.</p>
             </section>
         </main>
     </body>
